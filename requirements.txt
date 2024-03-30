@@ -1,0 +1,3 @@
+flask_restful
+
+flask~=3.0.2
