@@ -22,7 +22,7 @@ class todoList(Resource):
 
 class todo(Resource):
     def get(self,id):
-        if id>len(todos)-1 or id<0:
+        if id >= len(todos):
             return "out of range"
         return todos[id]
     
@@ -40,4 +40,4 @@ api.add_resource(todoList,'/todos')
 api.add_resource(todo,'/todo/<int:id>')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host = 'localhost', port = 8088,debug=True)
